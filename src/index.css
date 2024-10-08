@@ -1,0 +1,120 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+body {
+    margin: 0;
+    background-color: #fff;
+    color: #333;
+    font-size: 15px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    /*padding: 0px 20px;*/
+    max-width: 100%;
+}
+
+.header{
+    padding: 40px 40px;
+    width: 100%;
+    background: #9c16ae;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    color: white;
+}
+
+.header-name {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header-icon {
+    fill: white;
+    cursor: pointer;
+}
+
+.header-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%; /* Изменено на 100%, чтобы занимать всю ширину */
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.chat {
+    flex: 1;
+    width: 100%; /* Изменено на 100%, чтобы занимать всю ширину */
+    max-width: 800px; /* Максимальная ширина для чата */
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.form {
+    min-width: 100%;
+    max-width: 800px; /* Ограничение максимальной ширины */
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-icon  {
+    position: absolute;
+    right: 20px;
+    fill: #5f6368;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+.message {
+    color: red;
+    border-radius: 4px;
+    margin: 4px 0;
+    padding: 4px;
+}
+
+input[type=submit] {
+    visibility: collapse;
+}
+
+input {
+    padding: 20px;
+    min-width: 100%;
+    border: 0;
+    outline: none;
+    border: 1px solid rgba(25, 25, 25, 0.32);
+    border-radius: 20px;
+}
