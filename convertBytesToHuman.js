@@ -21,6 +21,13 @@ export default function convertBytesToHuman(bytes) {
     if (typeof bytes !== 'number') {
         return false;
     }
+    if (!Number.isFinite(bytes)) {
+        return false;
+    }
+    if(isNaN(bytes)){
+        return false;
+    }
+
     if (bytes < 0) {
         return false;
     }

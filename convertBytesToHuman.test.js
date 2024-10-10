@@ -8,6 +8,9 @@ describe('convertBytesToHuman', () => {
     expect(convertBytesToHuman({})).toBe(false); // Объект
     expect(convertBytesToHuman(null)).toBe(false); // null
     expect(convertBytesToHuman(undefined)).toBe(false); // undefined
+    expect(convertBytesToHuman(NaN)).toBe(false); // NaN
+    expect(convertBytesToHuman(Infinity)).toBe(false); // бесконечность
+    expect(convertBytesToHuman(-Infinity)).toBe(false); // отрицательная бесконечность
   });
 
   test('Возвращает корректное значение для чисел', () => {
