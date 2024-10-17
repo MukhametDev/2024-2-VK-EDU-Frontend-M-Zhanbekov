@@ -40,8 +40,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // Функция добавления сообщения в чат
     function addMessageToChat(messageObject) {
         const messageElement = document.createElement('div');
-        messageElement.textContent = `${messageObject.name} [${messageObject.time}]: ${messageObject.message}`;
-        chat.appendChild(messageElement);
+        const messageWrapElement = document.createElement('div');
+        const messageInfoElement = document.createElement('div');
+
+        messageWrapElement.classList.add('message-wrap');
+        messageElement.classList.add('message-element');
+        messageInfoElement.classList.add('message-info');
+
+        messageInfoElement.textContent = `${messageObject.name} ${messageObject.time}`;
+        messageElement.textContent = `${messageObject.message}`;
+        messageWrapElement.appendChild(messageInfoElement);
+        messageWrapElement.appendChild(messageElement);
+        chat.appendChild(messageWrapElement);
         chat.scrollTop = chat.scrollHeight; // Прокрутка вниз
     }
 
