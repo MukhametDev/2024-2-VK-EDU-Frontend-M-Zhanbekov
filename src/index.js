@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const sendBtn = document.getElementById('sendBtn');
     const now = new Date();
     const name = document.querySelector(".header-title").textContent || "Anonymous";
+    const form = document.querySelector('.form');
 
     // Загрузка сообщений из localStorage
     loadMessages();
@@ -14,11 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     sendBtn.addEventListener('click', sendMessage);
 
     // Обработка отправки сообщения по нажатию Enter
-    messageInput.addEventListener('keypress', (event) => {
-        if (event.key === 'Enter') {
-            sendMessage();
-        }
-    });
+    form.addEventListener('submit', sendMessage);
 
     // Функция отправки сообщения
     function sendMessage() {
